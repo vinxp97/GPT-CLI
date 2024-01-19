@@ -8,7 +8,7 @@ class ChatInterface:
         self.master = master
         master.title("AI Chat Interface")
 
-        # Initialize OpenAI client
+        # Initialize OpenAI client -- http://localhost:1234/v1 points to a local LM Studio Server
         self.client = OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed")
         self.history = [
             {"role": "system", "content": "You are an intelligent assistant..."}
